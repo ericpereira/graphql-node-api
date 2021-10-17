@@ -1,0 +1,12 @@
+- Instalar e configurar typescript no arquivo tsconfig.json (dev)
+- Instalar automatizador de tarefas gulp arquivo gulpfile.js (dev)
+    - npm i -D -E gulp@3.9.1 gulp-typescript@3.2.2 gulp-clean@0.3.2
+- Configurar servidor com utils
+- Instalar o express-graphql
+    - npm i -S express-graphql@0.6.11 graphql@0.11.7 graphql-tools@2.3.0
+    - npm i -D -E @types/express-graphql@0.0.34 @types/graphql@0.11.5
+- Rota única
+    http://127.0.0.1:3333/graphql
+- Utiliza o sequelize ORM, mysql
+    - npm i -S -E sequelize@4.13.10 mysql2@1.4.2
+    - npm i -D -E @types/sequelize@4.0.76
