@@ -14,6 +14,10 @@ let db = null;
 if(!db){
     db = {};
 
+    //desativando operators
+    const operatorAliases = false;
+    config = Object.assign({ operatorAliases }, config);
+
     //prepara a instância do sequelize
     const sequelize: Sequelize.Sequelize = new Sequelize(
         config.database,
