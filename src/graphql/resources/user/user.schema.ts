@@ -9,6 +9,7 @@ const userTypes = `
         photo: String
         createdAt: String!
         updatedAt: String!
+        posts(first: Int, offset: Int): [ Post! ]!
     }
 
     # Quando o usuário for criar uma conta, vai pedir esses campos
@@ -33,7 +34,7 @@ const userTypes = `
 
 const userQueries = `
     # Retorna uma lista de usuários não nula (limit e offset, paginação baseada em slice)
-    user(first: Int, offset: Int): [ User! ]!
+    users(first: Int, offset: Int): [ User! ]!
     user(id: ID!): User
 `;
 

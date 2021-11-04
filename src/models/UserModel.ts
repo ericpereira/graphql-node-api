@@ -57,6 +57,13 @@ export default (sequelize: Sequelize.Sequelize, DataTypes: Sequelize.DataTypes):
                 beforeCreate: (user: UserInstance, options: Sequelize.CreateOptions): void => { //antes de salvar o usuário, encripta a senha
                     const salt = genSaltSync() //valor randomico adicionado ao hash da senha
                     user.password = hashSync(user.password, salt)
+                },
+                beforeUpdate: (user: UserInstance, options: Sequelize.CreateOptions): void => { //antes de atualizar o usuário
+                    //caso o campo de password estiver sendo alterado
+                    if(user.changed('password')){
+                        const salt = genSaltSync() //valor randomico adicionado ao hash da senha
+                        user.password = hashSync(user.password, salt)
+                    }
                 }
             }
         })

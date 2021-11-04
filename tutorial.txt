@@ -12,3 +12,6 @@
     - npm i -D -E @types/sequelize@4.0.76
 - Curso https://www.udemy.com/course/criando-apis-com-nodejs-graphql-jwt-e-sequelize/learn/lecture/8376726#content
     - Parei na aula 39. Sequelize CLI e config init
+- Conectar mutations com a execução do schema
+    - npm i -S -E lodash@4.17.4
+    - npm i -D -E @types/lodash@4.14.78
